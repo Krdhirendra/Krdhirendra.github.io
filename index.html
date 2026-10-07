@@ -32,12 +32,12 @@ background:radial-gradient(800px 500px at 88% 18%,rgba(38,70,255,.55),transparen
 .pill.y{background:var(--y);border-color:var(--y);color:#111}
 .pill.y:hover{background:#fff}
 .circ{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--y);color:#111;text-decoration:none;font-weight:600}
-.hcontent{position:relative;max-width:min(920px,64%);padding-top:clamp(40px,7vh,80px);margin-bottom:40px}
-.script{font:400 clamp(2rem,4.4vw,3.2rem)/1 "Yellowtail",cursive;color:var(--y);transform:rotate(-3deg);transform-origin:left;margin-bottom:-6px;display:block}
-.hero h1{font-size:clamp(3.6rem,8vw,9rem);color:#fff}
+.hcontent{position:relative;max-width:min(1400px,92%);padding-top:8vh;margin:auto 0}
+.script{font:400 clamp(3.6rem,8.6vw,7.4rem)/1 "Yellowtail",cursive;color:var(--y);transform:rotate(-3deg);transform-origin:left;margin-bottom:10px;display:block}
+.hero h1{font-size:2.5rem;color:#fff}
 .hrow{display:flex;align-items:center;gap:18px;margin-top:28px;flex-wrap:wrap}
 .hrow small{font-size:.8rem;color:#c9c9d6;line-height:1.4}
-.glass{position:relative;margin-top:auto;align-self:flex-start;display:flex;align-items:center;gap:26px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:16px 24px;backdrop-filter:blur(8px);flex-wrap:wrap}
+.glass{position:relative;margin-top:0;align-self:flex-start;display:flex;align-items:center;gap:26px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:16px 24px;backdrop-filter:blur(8px);flex-wrap:wrap}
 .glass strong{font-weight:500;font-size:.95rem;max-width:190px;line-height:1.3}
 .glass div.n{text-align:center;padding-left:22px;border-left:1px solid rgba(255,255,255,.25)}
 .glass .n b{display:block;font:400 2rem/1 "Bebas Neue",sans-serif}
@@ -229,10 +229,10 @@ function cards(){return P.filter(function(p){return p.type!="exp"&&(F=="All"||p.
 function home(){
 var cats=["All","Product strategy","AI and data"];
 return '<header class="hero" id="top">'+nav()+'<div class="hcontent"><span class="script">Hi, I’m Dhirendra Kumar</span><h1>I turn funnel data into products that ship</h1><div class="hrow"><a class="pill y" href="#/work">Explore my work</a></div></div>'+
-'<div class="glass"><strong>Open to PM and AI internships</strong><div class="n"><b>6</b><span>case studies</span></div><div class="n"><b>12.2M</b><span>users analysed</span></div><div class="n"><b>8.40</b><span>CGPA</span></div></div>'+
+'<div class="glass"><strong>Open to PM and AI internships</strong><div class="n"><b>5</b><span>projects and internship</span></div><div class="n"><b>12.2M</b><span>users analysed</span></div><div class="n"><b>8.40</b><span>CGPA</span></div></div>'+
 '</header>'+
 '<section id="experience"><div class="shead"><h2>Experience</h2><p>Where I’ve worked and led. Open a tile for the full details.</p></div><div class="grid two">'+xcards()+'</div></section>'+
-'<section id="work"><div class="shead"><h2>Selected work</h2><p>Competition and project case studies. Open a tile for the problem, approach, numbers and decisions.</p></div><div class="filters" role="group" aria-label="Filter">'+cats.map(function(c){return '<button data-f="'+c+'" aria-pressed="'+(c==F)+'">'+c+'</button>'}).join("")+'</div><div class="grid" id="grid">'+cards()+'</div></section>'+
+'<section id="work"><div class="shead"><h2>Selected work</h2><p>Case studies and projects. Open a tile for the problem, approach, numbers and decisions.</p></div><div class="filters" role="group" aria-label="Filter">'+cats.map(function(c){return '<button data-f="'+c+'" aria-pressed="'+(c==F)+'">'+c+'</button>'}).join("")+'</div><div class="grid" id="grid">'+cards()+'</div></section>'+
 '<section id="about"><div class="about"><div><h2>Why product management</h2><p>I got into product management because I enjoy deciding what should be built and why, not just how. Building AI products, an internship and case competitions taught me to start with user pain, decide with data and measure impact.</p></div></div></section>'+
 '<section id="skills"><div class="shead"><h2>Skills</h2></div><div class="skillrows">'+[["Programming","Python, C++, SQL, HTML/CSS, Streamlit"],["AI and ML","LangGraph, LangChain, RAG, agentic workflows, vector DBs, PyTorch, TensorFlow, scikit-learn, LLMs"],["Backend","FastAPI, API integration, NDJSON/SSE telemetry, Selenium, web scraping, Git/GitHub"],["Product tools","Mixpanel, Excel, Notion, ClickUp, Canva, PowerPoint"]].map(function(r){return '<div><h3>'+r[0]+'</h3><div class="tags">'+r[1].split(", ").map(function(t){return '<span>'+t+'</span>'}).join("")+'</div></div>'}).join("")+'</div></section>'+cta()}
 function cta(){return '<div class="cta" id="contact"><h2>Let’s build something people use</h2><p>I’m looking for product and AI internships where I can work from data to decision.</p><div class="row"><a class="pill y" href="mailto:krdhirendra2006@gmail.com">krdhirendra2006@gmail.com</a><a class="pill" href="tel:+916203258998">+91 62032 58998</a><a class="pill" href="https://www.linkedin.com/in/dhirendra-kumar-23b4b5318/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div><footer>© 2026 Dhirendra Kumar · IIT Kharagpur</footer>'}

@@ -16,9 +16,9 @@ body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.65 "Poppins",
 h1,h2,h3,.bb{font-family:"Bebas Neue",Impact,"Arial Narrow",sans-serif;font-weight:400;margin:0;line-height:.95;letter-spacing:.01em}
 a{color:inherit}
 a:focus-visible,button:focus-visible{outline:3px solid var(--y);outline-offset:3px}
-.wrap{max-width:1240px;margin:0 auto;padding:16px}
+.wrap{--pad:clamp(8px,1vw,18px);max-width:none;margin:0 auto;padding:var(--pad)}
 /* hero card */
-.hero{position:relative;overflow:hidden;color:#fff;border-radius:28px;border:1px solid #1d1d28;padding:22px 36px 36px;min-height:640px;
+.hero{position:relative;overflow:hidden;color:#fff;border-radius:0;border:0;margin:calc(-1*var(--pad)) calc(-1*var(--pad)) 0;padding:26px clamp(24px,4vw,64px) 40px;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
 background:radial-gradient(800px 500px at 88% 18%,rgba(38,70,255,.55),transparent 62%),radial-gradient(500px 380px at 70% 100%,rgba(38,70,255,.25),transparent 70%),var(--ink)}
 .hero::before{content:"";position:absolute;inset:0 0 0 48%;background:repeating-linear-gradient(90deg,rgba(60,90,255,.14) 0 46px,transparent 46px 110px);-webkit-mask-image:linear-gradient(90deg,transparent,#000 40%);mask-image:linear-gradient(90deg,transparent,#000 40%)}
 .mono-unused{position:absolute;right:4%;top:14%;font:400 clamp(14rem,30vw,30rem)/.8 "Bebas Neue",sans-serif;color:transparent;-webkit-text-stroke:2px rgba(255,238,0,.55);pointer-events:none;user-select:none}
@@ -32,13 +32,13 @@ background:radial-gradient(800px 500px at 88% 18%,rgba(38,70,255,.55),transparen
 .pill.y{background:var(--y);border-color:var(--y);color:#111}
 .pill.y:hover{background:#fff}
 .circ{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--y);color:#111;text-decoration:none;font-weight:600}
-.hcontent{position:relative;max-width:640px;padding-top:70px}
+.hcontent{position:relative;max-width:min(920px,64%);padding-top:clamp(40px,7vh,80px);margin-bottom:40px}
 .script{font:400 clamp(2rem,4.4vw,3.2rem)/1 "Yellowtail",cursive;color:var(--y);transform:rotate(-3deg);transform-origin:left;margin-bottom:-6px;display:block}
-.hero h1{font-size:clamp(3.6rem,8.6vw,7.4rem);color:#fff}
+.hero h1{font-size:clamp(3.6rem,8vw,9rem);color:#fff}
 .hrow{display:flex;align-items:center;gap:18px;margin-top:28px;flex-wrap:wrap}
 .hrow small{font-size:.8rem;color:#c9c9d6;line-height:1.4}
-.glass{position:absolute;left:36px;bottom:36px;display:flex;align-items:center;gap:26px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:16px 24px;backdrop-filter:blur(8px);flex-wrap:wrap}
-.glass strong{font-weight:500;font-size:.95rem;max-width:150px;line-height:1.3}
+.glass{position:relative;margin-top:auto;align-self:flex-start;display:flex;align-items:center;gap:26px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:16px 24px;backdrop-filter:blur(8px);flex-wrap:wrap}
+.glass strong{font-weight:500;font-size:.95rem;max-width:190px;line-height:1.3}
 .glass div.n{text-align:center;padding-left:22px;border-left:1px solid rgba(255,255,255,.25)}
 .glass .n b{display:block;font:400 2rem/1 "Bebas Neue",sans-serif}
 .glass .n span{font-size:.72rem;color:#c9c9d6}
@@ -116,10 +116,11 @@ footer{padding:28px 8px 40px;color:var(--muted);font-size:.85rem;text-align:cent
 .next{display:flex;justify-content:space-between;align-items:center;gap:16px;text-decoration:none;color:#fff;border-radius:22px;padding:26px 30px;background:linear-gradient(160deg,var(--c1),var(--c2))}
 .next h3{font-size:2.4rem}.next small{opacity:.85}
 @media(max-width:900px){
-.hero{padding:18px 20px 24px;min-height:0}.hero{display:flex;flex-direction:column}.glass{order:4}.photo{order:5}.pillnav{display:none}.hcontent{padding-top:40px}.photo{position:relative;right:auto;bottom:auto;width:100%;max-width:380px;margin:26px auto -24px;display:block;border-radius:24px}
+.hero{padding:18px 20px 24px;min-height:100vh;min-height:100svh}.hero{display:flex;flex-direction:column}.glass{order:4}.photo{order:5}.pillnav{display:none}.hcontent{padding-top:40px;max-width:none;margin-bottom:0}.photo{position:relative;right:auto;bottom:auto;width:100%;max-width:380px;margin:26px auto -24px;display:block;border-radius:24px}
 .glass,.who{position:relative;left:auto;right:auto;bottom:auto;margin-top:22px}.glass{gap:14px}.glass div.n{padding-left:14px}
 .grid,.grid.two{grid-template-columns:1fr}.card{min-height:380px}
 .dh{padding:18px 20px 28px}.dlogo{display:none}.stats3{grid-template-columns:1fr}.blk{padding:22px 20px}.cta{padding:40px 20px}}
+@media(min-width:1280px){.grid:not(.two){grid-template-columns:repeat(3,1fr)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}
 </style>
 </head>

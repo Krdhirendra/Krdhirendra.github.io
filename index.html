@@ -228,7 +228,7 @@ function xcards(){return P.filter(function(p){return p.type=="exp"}).map(functio
 function cards(){return P.filter(function(p){return p.type!="exp"&&(F=="All"||p.cat==F)}).map(function(p){return '<a class="card" style="--c1:'+p.c[0]+';--c2:'+p.c[1]+'" href="#/p/'+p.id+'"><span class="cat">'+p.cat+'</span>'+(p.img?'<img class="cover'+(p.wide?' wide':'')+(p.plate?' plate':'')+(p.flat?' flat':'')+'" src="'+p.img+'" alt="">':'')+'<h3>'+p.title+'</h3><p>'+p.desc+'</p><div class="mini">'+p.stats.map(function(s){return '<div><b>'+s[0]+'</b><span>'+s[1]+'</span></div>'}).join("")+'</div><span class="go">View case</span></a>'}).join("")}
 function home(){
 var cats=["All","Product strategy","AI and data"];
-return '<header class="hero" id="top">'+nav()+'<div class="hcontent"><span class="script">Hi, I’m Dhirendra Kumar</span><h1>I turn funnel data into products that ship</h1><div class="hrow"><a class="pill y" href="#/work">Explore my work</a></div></div>'+
+return '<header class="hero" id="top">'+nav()+'<div class="hcontent"><span class="script">Hi, I’m Dhirendra Kumar</span><h1>I TURN USER PROBLEMS + DATA INTO PRODUCTS THAT SHIP</h1><div class="hrow"><a class="pill y" href="#/work">Explore my work</a></div></div>'+
 '<div class="glass"><strong>Open to PM and AI internships</strong><div class="n"><b>5</b><span>projects and internship</span></div><div class="n"><b>12.2M</b><span>users analysed</span></div><div class="n"><b>8.40</b><span>CGPA</span></div></div>'+
 '</header>'+
 '<section id="experience"><div class="shead"><h2>Experience</h2><p>Where I’ve worked and led. Open a tile for the full details.</p></div><div class="grid two">'+xcards()+'</div></section>'+
